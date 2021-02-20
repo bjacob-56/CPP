@@ -4,7 +4,7 @@ OBJ_DIR	:= obj/
 # OBJ_DIRS = $(addprefix $(OBJ_DIR), main clear utils)
 OBJ_DIRS = $(OBJ_DIR)
 
-PRE_SRCS =	main Phonebook.class
+PRE_SRCS =	main Contact.class
 
 SRCS = $(addsuffix .cpp, $(addprefix $(SRC_DIR), $(PRE_SRCS)))
 OBJS = $(addsuffix .o, $(addprefix $(OBJ_DIR), $(PRE_SRCS)))
@@ -25,7 +25,7 @@ $(NAME): $(OBJ_DIRS) $(OBJS)
 $(OBJ_DIRS):
 	mkdir -p $(OBJ_DIRS)
 
-$(OBJS) : includes/Phonebook.class.hpp
+$(OBJS) : includes/Contact.class.hpp
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
