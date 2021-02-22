@@ -37,7 +37,7 @@ std::string	get_tronc_str(std::string str){
 	if (len >= 10)
 	{
 		str_tronc[9] = '.';
-		str_tronc[10] = 0;
+		str_tronc.erase(10, len - 10);
 	}
 	while (len++ < 10)
 		str_tronc.insert(0, " ");
@@ -53,7 +53,7 @@ void	Contact::display_name_info(void){
 	lastName = get_tronc_str(this->_lastName);
 	login = get_tronc_str(this->_login);
 
-	std::cout << "         " << this->_index << "|" << firstName << "|" << lastName << "|" << login << std::endl;
+	std::cout << "|         " << this->_index << "|" << firstName << "|" << lastName << "|" << login << "|" << std::endl;
 }
 
 void	Contact::display_full_info(void){

@@ -4,6 +4,8 @@
 # include <iostream>
 # include <string>
 
+# define CAPACITY 8
+
 class Contact {
 
 public:
