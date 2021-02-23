@@ -1,7 +1,5 @@
 #include "../includes/Pony.hpp"
 
-#include <iostream>
-
 Pony::Pony(void){
 	this->_name = "Little Pony";
 	this->_color = "black";

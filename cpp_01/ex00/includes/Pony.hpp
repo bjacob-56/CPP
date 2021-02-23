@@ -2,6 +2,7 @@
 # define PONY_HPP
 
 #include <string>
+#include <iostream>
 
 class Pony {
 
@@ -13,10 +14,10 @@ public:
 	std::string get_name(void);
 	std::string get_color(void);
 	int 		get_age(void);
-	void	set_name(std::string name);
-	void	set_color(std::string color);
-	void	set_age(int	age);
-	void	display_info(void);
+	void		set_name(std::string name);
+	void		set_color(std::string color);
+	void		set_age(int	age);
+	void		display_info(void);
 	static int	get_nb_ponies(void);
 
 private:
