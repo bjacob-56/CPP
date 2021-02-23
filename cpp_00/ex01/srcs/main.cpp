@@ -1,4 +1,4 @@
-#include "../includes/Contact.class.hpp"
+#include "../includes/Contact.hpp"
 
 void	ft_add(Contact phonebook[CAPACITY], int *nb_contacts, int *index_contact) {
 	std::string	firstName;
