@@ -21,7 +21,7 @@ void	Contact::set_contact_info(int index, std::string fi, std::string la, std::s
 	this->_postalAddress = po;
 	this->_emailAddress = em;
 	this->_phoneNumber = ph;
-	this->_birthdayDate = bi; // bon format ?
+	this->_birthdayDate = bi;
 	this->_favoriteMeal = fa;
 	this->_underwearColor = un;
 	this->_darkestSecret = da;

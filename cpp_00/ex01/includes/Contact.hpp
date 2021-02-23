@@ -19,7 +19,6 @@ public:
 			std::string da);
 	void	display_name_info(void);
 	void	display_full_info(void);
-	// void	get_tronc_str(std::string str);
 
 private:
 
@@ -30,7 +29,7 @@ private:
 	std::string	_postalAddress;
 	std::string	_emailAddress;
 	std::string	_phoneNumber;
-	std::string	_birthdayDate; // bon format ?
+	std::string	_birthdayDate;
 	std::string	_favoriteMeal;
 	std::string	_underwearColor;
 	std::string	_darkestSecret;
