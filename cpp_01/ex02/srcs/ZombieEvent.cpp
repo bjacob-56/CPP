@@ -6,7 +6,7 @@
 /*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 12:08:03 by bjacob            #+#    #+#             */
-/*   Updated: 2021/02/23 14:12:51 by bjacob           ###   ########lyon.fr   */
+/*   Updated: 2021/02/23 14:19:59 by bjacob           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,9 @@ void	ZombieEvent::setZombieType(std::string type)
 
 Zombie	*ZombieEvent::newZombie(std::string name)
 {
-	Zombie *zombie = new Zombie(name, this->_type);
+	Zombie *zombie = new Zombie();
+	zombie->setName(name);
+	zombie->setType(this->_type);
 	zombie->advert();
 	return (zombie);
 }
@@ -46,7 +48,9 @@ void	ZombieEvent::randomChump(void)
 
 	std::string name = tab_name[nb];
 
-	Zombie zombie = Zombie(name, this->_type);
+	Zombie zombie = Zombie();
+	zombie.setName(name);
+	zombie.setType(this->_type);
 
 	zombie.advert();
 }

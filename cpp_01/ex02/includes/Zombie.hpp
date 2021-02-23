@@ -6,7 +6,7 @@
 /*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 12:08:07 by bjacob            #+#    #+#             */
-/*   Updated: 2021/02/23 14:14:19 by bjacob           ###   ########lyon.fr   */
+/*   Updated: 2021/02/23 14:17:58 by bjacob           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ class Zombie {
 
 public:
 
-	Zombie(std::string name, std::string type);
+	Zombie(void);
 	~Zombie(void);
+	void	setName(std::string name);
+	void	setType(std::string type);
 	void	advert(void);
 
 private:
