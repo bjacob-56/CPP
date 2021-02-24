@@ -24,11 +24,11 @@ public:
 	Brain(void);
 	~Brain(void);
 	std::string	identify(void) const;
+	int	get_weight(void) const;
 
 private:
 
 	int	_weight;
-	int	_state;
 
 };
 

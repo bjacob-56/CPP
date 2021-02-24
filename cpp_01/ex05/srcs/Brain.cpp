@@ -12,10 +12,8 @@
 
 #include "../includes/Brain.hpp"
 
-Brain::Brain(void)
+Brain::Brain(void): _weight(1500)
 {
-	this->_weight = 1500;
-	this->_state = 1;
 	return ;
 }
 
@@ -32,4 +30,9 @@ std::string Brain::identify(void) const
 	add = (long)this;
 	ss << "0x" << std::uppercase << std::hex << add;
 	return(ss.str());
+}
+
+int	Brain::get_weight(void) const
+{
+	return(this->_weight);
 }

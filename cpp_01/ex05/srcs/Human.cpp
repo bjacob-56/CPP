@@ -22,12 +22,12 @@ Human::~Human(void)
 	return ;
 }
 
-const Brain&	Human::getBrain(void)
+const Brain&	Human::getBrain(void) const
 {
 	return (this->_brain);
 }
 
-std::string	Human::identify(void)
+std::string	Human::identify(void) const
 {
 	return(this->_brain.identify());
 }

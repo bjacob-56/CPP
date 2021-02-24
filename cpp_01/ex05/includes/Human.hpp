@@ -24,8 +24,8 @@ public:
 
 	Human(void);
 	~Human(void);
-	const Brain&	getBrain(void);
-	std::string	identify(void);
+	const Brain&	getBrain(void) const;
+	std::string	identify(void) const;
 
 private:
 	const Brain	_brain;
