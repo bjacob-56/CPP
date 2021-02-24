@@ -21,10 +21,14 @@ class Template_class {
 public:
 
 	Template_class(void);
+	Template_class(Template_class const & src);
 	~Template_class(void);
 
-private:
+	Template_class &	operator=(Template_class const & rhs);
+	int	getValue(void) const;
 
+private:
+	int	_value;
 
 };
 
