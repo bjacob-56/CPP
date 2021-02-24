@@ -16,4 +16,3 @@ if [ $# -gt 0 ]; then
 	sed -e "s/Template_class/$1/g" ../../template/Makefile > Makefile
 
 fi
-

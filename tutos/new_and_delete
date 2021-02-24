@@ -1,0 +1,2 @@
+	Pony	*ponies = new Pony[42];
+	delete [] ponies;

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/23 12:00:42 by bjacob            #+#    #+#             */
+/*   Updated: 2021/02/23 12:00:43 by bjacob           ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/Contact.hpp"
 
 void	ft_add(Contact phonebook[CAPACITY], int *nb_contacts, int *index_contact) {

@@ -13,8 +13,8 @@
 #ifndef TEMPLATE_CLASS_HPP
 # define TEMPLATE_CLASS_HPP
 
-#include <string>
-#include <iostream>
+# include <string>
+# include <iostream>
 
 class Template_class {
 
