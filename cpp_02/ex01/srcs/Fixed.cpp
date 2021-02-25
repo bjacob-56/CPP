@@ -28,6 +28,15 @@ Fixed::Fixed(Fixed const & src)
 Fixed::Fixed(const int i)
 {
 	std::cout << "Int constructor called" << std::endl;
+	long lo;
+
+	lo = (long)i * pow(2, Fixed::_nbBits);
+	if (lo > INT_MAX || lo < INT_MIN)
+	{
+		std::cout << "Int " << i << " is to big" << std::endl;
+		this->_rawBits = 0;
+		return ;
+	}
 	this->_rawBits = pow(2, Fixed::_nbBits) * i;
 	return ;
 }
@@ -35,6 +44,15 @@ Fixed::Fixed(const int i)
 Fixed::Fixed(const float f)
 {
 	std::cout << "Float constructor called" << std::endl;
+	long lo;
+
+	lo = (long)f * pow(2, Fixed::_nbBits);
+	if (lo > INT_MAX || lo < INT_MIN)
+	{
+		std::cout << "Float " << f << " is to big" << std::endl;
+		this->_rawBits = 0;
+		return ;
+	}
 	this->_rawBits = roundf(pow(2, Fixed::_nbBits) * f);
 	return ;
 }

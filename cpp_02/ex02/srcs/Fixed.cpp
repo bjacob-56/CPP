@@ -30,13 +30,31 @@ Fixed::Fixed(Fixed const & src)
 Fixed::Fixed(const int i)
 {
 	// std::cout << "Int constructor called" << std::endl;
-	this->_rawBits = i * pow(2, Fixed::_nbBits);
+	long lo;
+
+	lo = (long)i * pow(2, Fixed::_nbBits);
+	if (lo > INT_MAX || lo < INT_MIN)
+	{
+		std::cout << "Int " << i << " is to big" << std::endl;
+		this->_rawBits = 0;
+		return ;
+	}
+	this->_rawBits = pow(2, Fixed::_nbBits) * i;
 	return ;
 }
 
 Fixed::Fixed(const float f)
 {
 	// std::cout << "Float constructor called" << std::endl;
+	long lo;
+
+	lo = (long)f * pow(2, Fixed::_nbBits);
+	if (lo > INT_MAX || lo < INT_MIN)
+	{
+		std::cout << "Float " << f << " is to big" << std::endl;
+		this->_rawBits = 0;
+		return ;
+	}
 	this->_rawBits = roundf(pow(2, Fixed::_nbBits) * f);
 	return ;
 }
@@ -82,29 +100,67 @@ Fixed & Fixed::operator=(Fixed const & rhs){
 
 Fixed	Fixed::operator+(Fixed const & rhs) const
 {
+	long i;
 	Fixed	res;
-	res.setRawBits(this->_rawBits + rhs._rawBits);
+	i = (long)this->_rawBits + (long)rhs._rawBits;
+	if (i > INT_MAX || i < INT_MIN)
+	{
+		std::cerr << "Results " << i << " is too big" << std::endl;
+		res._rawBits = 0;
+		return (res);
+	}
+	res.setRawBits((int)i);
 	return (res);
 }
 
 Fixed	Fixed::operator-(Fixed const & rhs) const
 {
+	long i;
 	Fixed	res;
-	res.setRawBits(this->_rawBits - rhs._rawBits);
+	i = (long)this->_rawBits - (long)rhs._rawBits;
+	if (i > INT_MAX || i < INT_MIN)
+	{
+		std::cerr << "Results " << i << " is too big" << std::endl;
+		res._rawBits = 0;
+		return (res);
+	}
+	res.setRawBits((int)i);
 	return (res);
 }
 
 Fixed	Fixed::operator*(Fixed const & rhs) const
 {
+	long i;
 	Fixed	res;
-	res.setRawBits((long)this->_rawBits * (long)rhs._rawBits / pow(2, Fixed::_nbBits));
+	i = (long)this->_rawBits * (long)rhs._rawBits / pow(2, Fixed::_nbBits);
+	if (i > INT_MAX || i < INT_MIN)
+	{
+		std::cerr << "Results " << i << " is too big" << std::endl;
+		res._rawBits = 0;
+		return (res);
+	}
+	res.setRawBits((int)i);
 	return (res);
 }
 
 Fixed	Fixed::operator/(Fixed const & rhs) const
 {
+	if (!rhs._rawBits)
+	{
+		std::cerr << "Warning: null denominator" << std::endl;
+		return (Fixed(0));
+	}
+
+	long i;
 	Fixed	res;
-	res.setRawBits((long)this->_rawBits * (long)pow(2, Fixed::_nbBits) / rhs._rawBits);
+	i = (long)this->_rawBits * (long)pow(2, Fixed::_nbBits) / rhs._rawBits;
+	if (i > INT_MAX || i < INT_MIN)
+	{
+		std::cerr << "Results " << i << " is too big" << std::endl;
+		res._rawBits = 0;
+		return (res);
+	}
+	res.setRawBits((int)i);
 	return (res);
 }
 

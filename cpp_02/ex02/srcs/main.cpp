@@ -6,7 +6,7 @@
 /*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 12:08:05 by bjacob            #+#    #+#             */
-/*   Updated: 2021/02/25 13:17:47 by bjacob           ###   ########lyon.fr   */
+/*   Updated: 2021/02/25 14:12:53 by bjacob           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int main(void)
 
 
 	std::cout << "=====  Operations  =====" << std::endl;
+	
 	std::cout << "a = " << a << std::endl;
 	std::cout << "b = " << b << std::endl;
 	std::cout << std::endl;
