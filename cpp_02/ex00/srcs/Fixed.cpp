@@ -12,13 +12,13 @@
 
 #include "../includes/Fixed.hpp"
 
-Fixed::Fixed(void): _rawBits(0), _nbBits(8) 
+Fixed::Fixed(void): _rawBits(0)
 {
 	std::cout << "Default constructor called" << std::endl;
 	return ;
 }
 
-Fixed::Fixed(Fixed const & src): _nbBits(8)
+Fixed::Fixed(Fixed const & src)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = src;
@@ -46,9 +46,4 @@ int Fixed::getRawBits(void) const
 void	Fixed::setRawBits(int const raw)
 {
 	this->_rawBits = raw;
-}
-
-int Fixed::getNbBits(void) const
-{
-	return (this->_nbBits);
 }

@@ -27,11 +27,10 @@ public:
 	Fixed &	operator=(Fixed const & rhs);
 	int getRawBits(void) const;
 	void setRawBits(int const raw);
-	int	getNbBits(void) const;
 
 private:
 	int			_rawBits;
-	const int	_nbBits;
+	static const int	_nbBits = 8;
 
 };
 
