@@ -8,7 +8,7 @@ PRE_SRCS =	main Fixed
 SRCS = $(addsuffix .cpp, $(addprefix $(SRC_DIR), $(PRE_SRCS)))
 OBJS = $(addsuffix .o, $(addprefix $(OBJ_DIR), $(PRE_SRCS)))
 
-NAME = Fixed
+NAME = fixed
 
 CC = clang++
 RM = rm -f

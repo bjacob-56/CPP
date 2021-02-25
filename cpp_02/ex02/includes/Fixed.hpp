@@ -41,8 +41,8 @@ public:
 	int	operator==(Fixed const & rhs) const;
 	int	operator!=(Fixed const & rhs) const;
 
-	Fixed &	operator++(void);	// preincrement
-	Fixed	operator++(int i);	// postincrement
+	Fixed &	operator++(void);	// pre increment
+	Fixed	operator++(int i);	// post increment
 	Fixed &	operator--(void);
 	Fixed	operator--(int i);
 
