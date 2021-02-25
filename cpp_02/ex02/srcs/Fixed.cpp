@@ -35,7 +35,7 @@ Fixed::Fixed(const int i)
 	lo = (long)i * pow(2, Fixed::_nbBits);
 	if (lo > INT_MAX || lo < INT_MIN)
 	{
-		std::cout << "Int " << i << " is to big" << std::endl;
+		std::cout << "Int " << i << " is too big" << std::endl;
 		this->_rawBits = 0;
 		return ;
 	}
@@ -51,7 +51,7 @@ Fixed::Fixed(const float f)
 	lo = (long)f * pow(2, Fixed::_nbBits);
 	if (lo > INT_MAX || lo < INT_MIN)
 	{
-		std::cout << "Float " << f << " is to big" << std::endl;
+		std::cout << "Float " << f << " is too big" << std::endl;
 		this->_rawBits = 0;
 		return ;
 	}
