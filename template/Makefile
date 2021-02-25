@@ -12,7 +12,7 @@ NAME = Template_class
 
 CC = clang++
 RM = rm -f
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 INC =	-I./includes
 
 all:	$(NAME)
