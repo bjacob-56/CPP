@@ -6,7 +6,7 @@
 /*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 12:08:05 by bjacob            #+#    #+#             */
-/*   Updated: 2021/02/26 10:04:03 by bjacob           ###   ########lyon.fr   */
+/*   Updated: 2021/02/26 11:09:42 by bjacob           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include "../includes/ScavTrap.hpp"
 #include "../includes/ClapTrap.hpp"
 #include "../includes/NinjaTrap.hpp"
+
+#include <iostream>
 
 int main(void)
 {
