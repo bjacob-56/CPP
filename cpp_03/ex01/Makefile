@@ -8,7 +8,7 @@ PRE_SRCS =	main FragTrap ScavTrap
 SRCS = $(addsuffix .cpp, $(addprefix $(SRC_DIR), $(PRE_SRCS)))
 OBJS = $(addsuffix .o, $(addprefix $(OBJ_DIR), $(PRE_SRCS)))
 
-NAME = scavTrap
+NAME = scavtrap
 
 CC = clang++
 RM = rm -f

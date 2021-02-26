@@ -3,12 +3,12 @@ OBJ_DIR	:= obj/
 
 OBJ_DIRS = $(OBJ_DIR)
 
-PRE_SRCS =	main FragTrap
+PRE_SRCS =	main FragTrap ScavTrap ClapTrap
 
 SRCS = $(addsuffix .cpp, $(addprefix $(SRC_DIR), $(PRE_SRCS)))
 OBJS = $(addsuffix .o, $(addprefix $(OBJ_DIR), $(PRE_SRCS)))
 
-NAME = fragtrap
+NAME = claptrap
 
 CC = clang++
 RM = rm -f
@@ -24,7 +24,7 @@ $(NAME): $(OBJ_DIRS) $(OBJS)
 $(OBJ_DIRS):
 	mkdir -p $(OBJ_DIRS)
 
-$(OBJS) : includes/FragTrap.hpp
+$(OBJS) : includes/FragTrap.hpp includes/ScavTrap.hpp includes/ClapTrap.hpp
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
