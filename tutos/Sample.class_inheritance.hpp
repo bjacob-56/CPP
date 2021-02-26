@@ -3,20 +3,17 @@
 
 # include <string>
 
-class Animal {
+class AAnimal {
 
 public:
 	int foo;
 
-	Animal(int v);
-	~Animal(void);
+	AAnimal(int v);
+	~AAnimal(void);
 
 	void	bar(void) const;
 
-	// int		getFoo(void) const;
-	// int		compare(Sample * other) const;
-
-	void	run(int distance);
+	virtual void	run(int distance) = 0; // class abstraite a cause du " = 0" 
 	void	eat(std::string food);
 
 private:
@@ -28,7 +25,7 @@ protected:	// private + accessible par une instance derivee
 
 };
 
-class Cat : public Animal {
+class Cat : public AAnimal {
 
 public:
 	int foo;
@@ -42,11 +39,21 @@ public:
 	// int		compare(Sample * other) const;
 
 	void	meow(int distance);
-	void	run(int distance);
+	virtual void	run(int distance);
 
 private:
 
 };
+
+class IInterface {	// contrat à respecter un implémentant la classe (en héritant, cahier des charges à respecter)
+
+public:
+	virtual void	run(int distance) = 0;
+
+};
+
+
+}
 
 #endif
 
