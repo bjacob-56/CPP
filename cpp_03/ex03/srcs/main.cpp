@@ -6,12 +6,14 @@
 /*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 12:08:05 by bjacob            #+#    #+#             */
-/*   Updated: 2021/02/26 10:01:05 by bjacob           ###   ########lyon.fr   */
+/*   Updated: 2021/02/26 10:04:03 by bjacob           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/FragTrap.hpp"
 #include "../includes/ScavTrap.hpp"
+#include "../includes/ClapTrap.hpp"
+#include "../includes/NinjaTrap.hpp"
 
 int main(void)
 {
@@ -51,22 +53,41 @@ int main(void)
 	scav2.takeDamage(scav1.getRangeAttackDamage());
 	scav1.meleeAttack(scav2.getName());
 	scav2.takeDamage(scav1.getMeleeAttackDamage());
-	scav1.meleeAttack(scav2.getName());
-	scav2.takeDamage(scav1.getMeleeAttackDamage());
-	scav1.meleeAttack(scav2.getName());
-	scav2.takeDamage(scav1.getMeleeAttackDamage());
-	scav1.meleeAttack(scav2.getName());
-	scav2.takeDamage(scav1.getMeleeAttackDamage());
+	// scav1.meleeAttack(scav2.getName());
+	// scav2.takeDamage(scav1.getMeleeAttackDamage());
+	// scav1.meleeAttack(scav2.getName());
+	// scav2.takeDamage(scav1.getMeleeAttackDamage());
+	// scav1.meleeAttack(scav2.getName());
+	// scav2.takeDamage(scav1.getMeleeAttackDamage());
 
 	scav2.beRepaired(20);
 
 	scav2.challengeNewcomer();
-	scav2.challengeNewcomer();
-	scav2.challengeNewcomer();
-	scav2.challengeNewcomer();
+	// scav2.challengeNewcomer();
+	// scav2.challengeNewcomer();
+	// scav2.challengeNewcomer();
 
-	scav2.rest(10);
-	scav2.challengeNewcomer();
+	// scav2.rest(10);
+	// scav2.challengeNewcomer();
 	
+	std::cout << std::endl;
+
+	NinjaTrap	ninja1("ninja1");
+	NinjaTrap	ninja2("ninja2");
+
+	ninja1.rangedAttack(ninja2.getName());
+	ninja2.takeDamage(ninja1.getRangeAttackDamage());
+	ninja1.meleeAttack(ninja2.getName());
+	ninja2.takeDamage(ninja1.getMeleeAttackDamage());
+
+	ninja2.beRepaired(20);
+
+	ClapTrap clap1("clap1");
+
+	ninja2.ninjaShoebox(clap1);
+	ninja2.ninjaShoebox(frag1);
+	ninja2.ninjaShoebox(scav1);
+	ninja2.ninjaShoebox(ninja1);
+
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 12:08:05 by bjacob            #+#    #+#             */
-/*   Updated: 2021/02/25 17:50:55 by bjacob           ###   ########lyon.fr   */
+/*   Updated: 2021/02/26 10:00:48 by bjacob           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,32 @@
 
 int main(void)
 {
-	FragTrap brian("Brian");
-	FragTrap john("John");
+	FragTrap frag1("frag1");
+	FragTrap frag2("frag2");
 
-	brian.rangedAttack(john.getName());
-	john.takeDamage(brian.getRangeAttackDamage());
-	brian.meleeAttack(john.getName());
-	john.takeDamage(brian.getMeleeAttackDamage());
-	brian.meleeAttack(john.getName());
-	john.takeDamage(brian.getMeleeAttackDamage());
-	brian.meleeAttack(john.getName());
-	john.takeDamage(brian.getMeleeAttackDamage());
-	brian.meleeAttack(john.getName());
-	john.takeDamage(brian.getMeleeAttackDamage());
+	frag1.rangedAttack(frag2.getName());
+	frag2.takeDamage(frag1.getRangeAttackDamage());
+	frag1.meleeAttack(frag2.getName());
+	frag2.takeDamage(frag1.getMeleeAttackDamage());
+	frag1.meleeAttack(frag2.getName());
+	frag2.takeDamage(frag1.getMeleeAttackDamage());
+	frag1.meleeAttack(frag2.getName());
+	frag2.takeDamage(frag1.getMeleeAttackDamage());
+	frag1.meleeAttack(frag2.getName());
+	frag2.takeDamage(frag1.getMeleeAttackDamage());
 
-	john.beRepaired(30);
-	john.beRepaired(30);
+	frag2.beRepaired(30);
+	frag2.beRepaired(30);
 
-	john.vaulthunter_dot_exe(brian.getName());
-	john.vaulthunter_dot_exe(brian.getName());
-	john.vaulthunter_dot_exe(brian.getName());
-	john.vaulthunter_dot_exe(brian.getName());
-	john.vaulthunter_dot_exe(brian.getName());
+	frag2.vaulthunter_dot_exe(frag1.getName());
+	frag2.vaulthunter_dot_exe(frag1.getName());
+	frag2.vaulthunter_dot_exe(frag1.getName());
+	frag2.vaulthunter_dot_exe(frag1.getName());
+	frag2.vaulthunter_dot_exe(frag1.getName());
 
-	john.rest(30);
-	john.vaulthunter_dot_exe(brian.getName());
-	john.vaulthunter_dot_exe(brian.getName());
+	frag2.rest(30);
+	frag2.vaulthunter_dot_exe(frag1.getName());
+	frag2.vaulthunter_dot_exe(frag1.getName());
 
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 12:08:07 by bjacob            #+#    #+#             */
-/*   Updated: 2021/02/26 10:05:05 by bjacob           ###   ########lyon.fr   */
+/*   Updated: 2021/02/26 10:02:38 by bjacob           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 
 # include <string>
 # include <iostream>
+
+// #include "../includes/FragTrap.hpp"
+// #include "../includes/ScavTrap.hpp"
+// #include "../includes/NinjaTrap.hpp"
+
+class FragTrap;
+class ScavTrap;
+class NinjaTrap;
 
 class ClapTrap {
 

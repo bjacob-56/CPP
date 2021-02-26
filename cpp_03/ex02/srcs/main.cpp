@@ -6,7 +6,7 @@
 /*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 12:08:05 by bjacob            #+#    #+#             */
-/*   Updated: 2021/02/26 09:22:31 by bjacob           ###   ########lyon.fr   */
+/*   Updated: 2021/02/26 10:01:05 by bjacob           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,58 +16,58 @@
 
 int main(void)
 {
-	FragTrap	brian("Brian");
-	FragTrap	john("John");
+	FragTrap	frag1("frag1");
+	FragTrap	frag2("frag2");
 
-	brian.rangedAttack(john.getName());
-	john.takeDamage(brian.getRangeAttackDamage());
-	brian.meleeAttack(john.getName());
-	john.takeDamage(brian.getMeleeAttackDamage());
-	// brian.meleeAttack(john.getName());
-	// john.takeDamage(brian.getMeleeAttackDamage());
-	// brian.meleeAttack(john.getName());
-	// john.takeDamage(brian.getMeleeAttackDamage());
-	// brian.meleeAttack(john.getName());
-	// john.takeDamage(brian.getMeleeAttackDamage());
+	frag1.rangedAttack(frag2.getName());
+	frag2.takeDamage(frag1.getRangeAttackDamage());
+	frag1.meleeAttack(frag2.getName());
+	frag2.takeDamage(frag1.getMeleeAttackDamage());
+	// frag1.meleeAttack(frag2.getName());
+	// frag2.takeDamage(frag1.getMeleeAttackDamage());
+	// frag1.meleeAttack(frag2.getName());
+	// frag2.takeDamage(frag1.getMeleeAttackDamage());
+	// frag1.meleeAttack(frag2.getName());
+	// frag2.takeDamage(frag1.getMeleeAttackDamage());
 
-	// john.beRepaired(30);
-	john.beRepaired(30);
+	// frag2.beRepaired(30);
+	frag2.beRepaired(30);
 
-	john.vaulthunter_dot_exe(brian.getName());
-	// john.vaulthunter_dot_exe(brian.getName());
-	// john.vaulthunter_dot_exe(brian.getName());
-	// john.vaulthunter_dot_exe(brian.getName());
-	// john.vaulthunter_dot_exe(brian.getName());
+	frag2.vaulthunter_dot_exe(frag1.getName());
+	// frag2.vaulthunter_dot_exe(frag1.getName());
+	// frag2.vaulthunter_dot_exe(frag1.getName());
+	// frag2.vaulthunter_dot_exe(frag1.getName());
+	// frag2.vaulthunter_dot_exe(frag1.getName());
 
-	// john.rest(30);
-	// john.vaulthunter_dot_exe(brian.getName());
-	// john.vaulthunter_dot_exe(brian.getName());
+	// frag2.rest(30);
+	// frag2.vaulthunter_dot_exe(frag1.getName());
+	// frag2.vaulthunter_dot_exe(frag1.getName());
 
 	std::cout << std::endl;
 
-	ScavTrap	steven("Steven");
-	ScavTrap	aimy("Aimy");
+	ScavTrap	scav1("scav1");
+	ScavTrap	scav2("scav2");
 
-	steven.rangedAttack(aimy.getName());
-	aimy.takeDamage(steven.getRangeAttackDamage());
-	steven.meleeAttack(aimy.getName());
-	aimy.takeDamage(steven.getMeleeAttackDamage());
-	steven.meleeAttack(aimy.getName());
-	aimy.takeDamage(steven.getMeleeAttackDamage());
-	steven.meleeAttack(aimy.getName());
-	aimy.takeDamage(steven.getMeleeAttackDamage());
-	steven.meleeAttack(aimy.getName());
-	aimy.takeDamage(steven.getMeleeAttackDamage());
+	scav1.rangedAttack(scav2.getName());
+	scav2.takeDamage(scav1.getRangeAttackDamage());
+	scav1.meleeAttack(scav2.getName());
+	scav2.takeDamage(scav1.getMeleeAttackDamage());
+	scav1.meleeAttack(scav2.getName());
+	scav2.takeDamage(scav1.getMeleeAttackDamage());
+	scav1.meleeAttack(scav2.getName());
+	scav2.takeDamage(scav1.getMeleeAttackDamage());
+	scav1.meleeAttack(scav2.getName());
+	scav2.takeDamage(scav1.getMeleeAttackDamage());
 
-	aimy.beRepaired(20);
+	scav2.beRepaired(20);
 
-	aimy.challengeNewcomer();
-	aimy.challengeNewcomer();
-	aimy.challengeNewcomer();
-	aimy.challengeNewcomer();
+	scav2.challengeNewcomer();
+	scav2.challengeNewcomer();
+	scav2.challengeNewcomer();
+	scav2.challengeNewcomer();
 
-	aimy.rest(10);
-	aimy.challengeNewcomer();
+	scav2.rest(10);
+	scav2.challengeNewcomer();
 	
 	return (0);
 }
