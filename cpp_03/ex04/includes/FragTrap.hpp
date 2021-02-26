@@ -6,7 +6,7 @@
 /*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 12:08:07 by bjacob            #+#    #+#             */
-/*   Updated: 2021/02/26 10:21:13 by bjacob           ###   ########lyon.fr   */
+/*   Updated: 2021/02/26 11:03:42 by bjacob           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class FragTrap : virtual public ClapTrap {
 
 public:
 
+	FragTrap(void);
 	FragTrap(std::string name);
 	FragTrap(FragTrap const & src);
 	~FragTrap(void);

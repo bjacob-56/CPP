@@ -6,11 +6,17 @@
 /*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 12:08:04 by bjacob            #+#    #+#             */
-/*   Updated: 2021/02/26 09:24:21 by bjacob           ###   ########lyon.fr   */
+/*   Updated: 2021/02/26 11:05:46 by bjacob           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/FragTrap.hpp"
+
+FragTrap::FragTrap(void): ClapTrap("default", 100, 100, 100, 100, 1, 30, 20, 5)
+{
+	std::cout << "FR4G-TP " << "default" << " initialisé. En attente d'instruction..." << std::endl;
+	return ;
+}
 
 FragTrap::FragTrap(std::string name): ClapTrap(name, 100, 100, 100, 100, 1, 30, 20, 5)
 {
@@ -39,7 +45,7 @@ void	FragTrap::vaulthunter_dot_exe(std::string const & target)
 		return ;
 	}
 	
-	std::string	tab_attacks[5] = {" tir sur" , " lance une roquette sur ", " attaque avec véhémence ", " lance 'gros yeux' sur ", " frappe de toutes ses forces "};
+	std::string	tab_attacks[5] = {" tir sur " , " lance une roquette sur ", " attaque avec véhémence ", " lance 'gros yeux' sur ", " frappe de toutes ses forces "};
 	int	tab_damages[5] = {30, 50, 40, 2, 20};
 
 	std::time_t t = std::time(0);

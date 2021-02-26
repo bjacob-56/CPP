@@ -13,14 +13,13 @@
 #include "../includes/SuperTrap.hpp"
 
 SuperTrap::SuperTrap(std::string name): ClapTrap(name, FragTrap::init_hitPoints, FragTrap::init_maxHitPoints, NinjaTrap::init_energyPoints, NinjaTrap::init_maxEnergyPoints,
-	1, NinjaTrap::init_meleeAttackDamage, FragTrap::init_rangedAttackDamage, FragTrap::init_armorDamageReduction),
-	FragTrap(name), NinjaTrap(name)
+	1, NinjaTrap::init_meleeAttackDamage, FragTrap::init_rangedAttackDamage, FragTrap::init_armorDamageReduction)
 {
 	std::cout << "SUPER-TP " << name << " initialisé. En attente d'instruction..." << std::endl;
 	return ;
 }
 
-SuperTrap::SuperTrap(SuperTrap const & src): ClapTrap(src), FragTrap(src), NinjaTrap(src) 
+SuperTrap::SuperTrap(SuperTrap const & src): ClapTrap(src) 
 {
 	*this = src;
 	std::cout << "SUPER-TP " << this->_name << " cloné. En attente d'instruction..." << std::endl;
@@ -46,3 +45,14 @@ SuperTrap & SuperTrap::operator=(SuperTrap const & rhs){
 	return (*this);
 }
 
+void	SuperTrap::rangedAttack(std::string const & target)
+{
+	FragTrap::rangedAttack(target);
+	std::cout << "< C'était l'attaque à distance de FR4G-TP >" << std::endl;
+}
+
+void	SuperTrap::meleeAttack(std::string const & target)
+{
+	NinjaTrap::meleeAttack(target);
+	std::cout << "< C'était l'attaque au corps à corps de NINJ4-TP >" << std::endl;
+}

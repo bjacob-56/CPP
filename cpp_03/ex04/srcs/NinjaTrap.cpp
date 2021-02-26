@@ -12,6 +12,12 @@
 
 #include "../includes/NinjaTrap.hpp"
 
+NinjaTrap::NinjaTrap(void): ClapTrap("default", 60, 60, 120, 120, 1, 60, 5, 0)
+{
+	std::cout << "NINJ4-TP " << "default" << " initialisé. En attente d'instruction..." << std::endl;
+	return ;
+}
+
 NinjaTrap::NinjaTrap(std::string name): ClapTrap(name, 60, 60, 120, 120, 1, 60, 5, 0)
 {
 	std::cout << "NINJ4-TP " << name << " initialisé. En attente d'instruction..." << std::endl;

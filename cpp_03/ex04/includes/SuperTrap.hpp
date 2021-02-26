@@ -29,6 +29,9 @@ public:
 
 	SuperTrap &	operator=(SuperTrap const & rhs);
 
+	void	rangedAttack(std::string const & target);
+	void	meleeAttack(std::string const & target);
+
 };
 
 #endif

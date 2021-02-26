@@ -24,6 +24,7 @@ class NinjaTrap : virtual public ClapTrap {
 
 public:
 
+	NinjaTrap(void);
 	NinjaTrap(std::string name);
 	NinjaTrap(NinjaTrap const & src);
 	~NinjaTrap(void);
