@@ -6,7 +6,7 @@
 /*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 12:08:05 by bjacob            #+#    #+#             */
-/*   Updated: 2021/02/27 15:43:19 by bjacob           ###   ########lyon.fr   */
+/*   Updated: 2021/02/27 15:46:35 by bjacob           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,12 @@ int main()
 	std::cout << " ---------- Copying and assigning vlc ----------" << std::endl;
 
 	ISquad* vlc2 = new Squad(*vlc);
+	ISpaceMarine* temp = new AssaultTerminator;
 	Squad* vlc3 = new Squad();
+	vlc3->push(temp);
+	std::cout << "Number of SpaceMarines in the Squad vlc3 = " << vlc3->getCount() << std::endl;
 	*vlc3 = *vlc; 
-	
+	std::cout << "vlc copied in vlc3" << std::endl;
 	delete vlc;
 
 	std::cout << std::endl;
