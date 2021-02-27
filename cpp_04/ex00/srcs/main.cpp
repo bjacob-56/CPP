@@ -6,7 +6,7 @@
 /*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 12:08:05 by bjacob            #+#    #+#             */
-/*   Updated: 2021/02/27 09:37:29 by bjacob           ###   ########lyon.fr   */
+/*   Updated: 2021/02/27 15:08:31 by bjacob           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,12 @@ int main()
 	robert.polymorph(jim);
 	robert.polymorph(joe);
 	robert.polymorph(*pierre);
+
+	std::cout << std::endl;
+
+	jim.getPolymorphed();
+	joe.getPolymorphed();
+	pierre->getPolymorphed();
 
 	std::cout << std::endl;
 
