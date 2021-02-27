@@ -6,7 +6,7 @@
 /*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 12:08:04 by bjacob            #+#    #+#             */
-/*   Updated: 2021/02/27 17:21:53 by bjacob           ###   ########lyon.fr   */
+/*   Updated: 2021/02/27 17:48:00 by bjacob           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,12 @@ void AMateria::use(ICharacter& target)
 	_xp += 10;
 }
 
+void	AMateria::setXP(unsigned int xp)
+{
+	this->_xp = xp;
+}
+
 AMateria & AMateria::operator=(AMateria const & rhs){
-	// _type = rhs.getType();
 	_xp = rhs.getXP();
 	return (*this);
 }

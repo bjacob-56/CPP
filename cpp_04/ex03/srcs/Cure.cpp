@@ -36,7 +36,9 @@ Cure & Cure::operator=(Cure const & rhs){
 
 Cure* Cure::clone() const
 {
-	return (new Cure(*this));
+	Cure *res = new Cure(*this);
+	res->setXP(_xp);
+	return (res);
 }
 
 void Cure::use(ICharacter& target)

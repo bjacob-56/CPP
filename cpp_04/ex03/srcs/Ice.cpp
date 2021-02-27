@@ -36,7 +36,9 @@ Ice & Ice::operator=(Ice const & rhs){
 
 Ice* Ice::clone() const
 {
-	return (new Ice(*this));
+	Ice *res = new Ice(*this);
+	res->setXP(_xp);
+	return (res);
 }
 
 void Ice::use(ICharacter& target)

@@ -57,13 +57,11 @@ void MateriaSource::learnMateria(AMateria* m)
 		return ;
 	int i = -1;
 	while (++i < 4)
-	{
 		if (!_source[i])
 		{
-			_source[i] = m->clone();
+			_source[i] = m;
 			return ;
 		}
-	}
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type)
