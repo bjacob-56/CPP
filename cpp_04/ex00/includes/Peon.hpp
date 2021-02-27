@@ -22,15 +22,16 @@ class Peon : public Victim {
 
 public:
 
-	Peon(void);
+	Peon(std::string name);
 	Peon(Peon const & src);
-	~Peon(void);
+	virtual ~Peon(void);
 
 	Peon &	operator=(Peon const & rhs);
-	int	getValue(void) const;
+
+	virtual void getPolymorphed() const;
 
 private:
-	int	_value;
+	Peon(void);
 
 };
 

@@ -47,6 +47,6 @@ Victim & Victim::operator=(Victim const & rhs){
 
 std::ostream & operator<<(std::ostream & o, Victim & v)
 {
-	o << "I'm " << v.getName() << " and I like otters!";
+	o << "I'm " << v.getName() << " and I like otters!" << std::endl;
 	return (o);
 }

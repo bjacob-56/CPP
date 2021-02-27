@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Peon.cpp                                       :+:      :+:    :+:   */
+/*   Pony.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,31 +10,31 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/Peon.hpp"
+#include "../includes/Pony.hpp"
 
-Peon::Peon(std::string name): Victim(name)
+Pony::Pony(std::string name): Victim(name)
 {
-	std::cout << "Zog zog." << std::endl;
+	std::cout << "Zig zig." << std::endl;
 	return ;
 }
 
-Peon::Peon(Peon const & src): Victim(src.getName())
+Pony::Pony(Pony const & src): Victim(src.getName())
 {
 	return ;
 }
 
-Peon::~Peon(void)
+Pony::~Pony(void)
 {
-	std::cout << "Bleuark..." << std::endl;
+	std::cout << "Adios..." << std::endl;
 	return ;
 }
 
-Peon & Peon::operator=(Peon const & rhs){
+Pony & Pony::operator=(Pony const & rhs){
 	this->_name = rhs.getName();
 	return (*this);
 }
 
-void Peon::getPolymorphed() const
+void Pony::getPolymorphed() const
 {
-	std::cout << this->_name << " has been turned into a pink pony!" << std::endl;
+	std::cout << this->_name << " has been turned into a yellow cat!" << std::endl;
 }

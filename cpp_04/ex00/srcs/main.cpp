@@ -6,25 +6,36 @@
 /*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 12:08:05 by bjacob            #+#    #+#             */
-/*   Updated: 2021/02/26 16:16:29 by bjacob           ###   ########lyon.fr   */
+/*   Updated: 2021/02/27 09:37:29 by bjacob           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Sorcerer.hpp"
+#include "../includes/Victim.hpp"
+#include "../includes/Peon.hpp"
+#include "../includes/Pony.hpp"
 
-int main(void)
+int main()
 {
-	Sorcerer jean("Jean", "The Boss");
+	Sorcerer robert("Robert", "the Magnificent");
 
-	std::cout << jean << std::endl;
+	Victim jim("Jimmy");
+	Peon joe("Joe");
+	Victim *pierre = new Pony("Pierre");
+	
+	std::cout << std::endl;
 
+	std::cout << robert << jim << joe << *pierre;
+	
+	std::cout << std::endl;
 
-	Victim vick("Vick");
+	robert.polymorph(jim);
+	robert.polymorph(joe);
+	robert.polymorph(*pierre);
 
-	std::cout << vick << std::endl;
-	vick.getPolymorphed();
+	std::cout << std::endl;
 
-	jean.polymorph(vick);
+	delete pierre;
 
-	return (0);
+	return 0;
 }
