@@ -41,7 +41,7 @@ std::string	Enemy::getType(void) const
 void Enemy::takeDamage(int damage)
 {
 	if (damage <= 0)
-		return;
+		return ;
 	if (damage > this->_hp)
 		damage = this->_hp;
 	this->_hp -= damage;

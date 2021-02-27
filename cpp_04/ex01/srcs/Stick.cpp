@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RadScorpion.cpp                                       :+:      :+:    :+:   */
+/*   Stick.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,27 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/RadScorpion.hpp"
+#include "../includes/Stick.hpp"
 
-RadScorpion::RadScorpion(void): Enemy(80, "RadScorpion")
-{
-	std::cout << "* click click click *" << std::endl;
-	return ;
-}
-
-RadScorpion::RadScorpion(RadScorpion const & src):
-	Enemy(src.getHP(), src.getType())
+Stick::Stick(void): AWeapon("Stick", 2, 10)
 {
 	return ;
 }
 
-RadScorpion::~RadScorpion(void)
+Stick::Stick(Stick const & src):
+	AWeapon(src.getName(), src.getAPCost(), src.getDamage())
 {
-	std::cout << "* SPROTCH *" << std::endl;
 	return ;
 }
 
-RadScorpion & RadScorpion::operator=(RadScorpion const & rhs){
-	Enemy::operator=(rhs);
+Stick::~Stick(void)
+{
+	return ;
+}
+
+Stick & Stick::operator=(Stick const & rhs){
+	AWeapon::operator=(rhs);
 	return (*this);
+}
+
+void	Stick::attack(void) const
+{
+	std::cout << "* tic tic *" << std::endl;
 }

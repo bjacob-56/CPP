@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RadScorpion.cpp                                       :+:      :+:    :+:   */
+/*   LittleRabbit.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,27 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/RadScorpion.hpp"
+#include "../includes/LittleRabbit.hpp"
 
-RadScorpion::RadScorpion(void): Enemy(80, "RadScorpion")
+LittleRabbit::LittleRabbit(void): Enemy(10, "LittleRabbit")
 {
-	std::cout << "* click click click *" << std::endl;
+	std::cout << "* squick squick *" << std::endl;
 	return ;
 }
 
-RadScorpion::RadScorpion(RadScorpion const & src):
+LittleRabbit::LittleRabbit(LittleRabbit const & src):
 	Enemy(src.getHP(), src.getType())
 {
 	return ;
 }
 
-RadScorpion::~RadScorpion(void)
+LittleRabbit::~LittleRabbit(void)
 {
-	std::cout << "* SPROTCH *" << std::endl;
+	std::cout << "* Oooooooh *" << std::endl;
 	return ;
 }
 
-RadScorpion & RadScorpion::operator=(RadScorpion const & rhs){
+LittleRabbit & LittleRabbit::operator=(LittleRabbit const & rhs){
 	Enemy::operator=(rhs);
 	return (*this);
 }

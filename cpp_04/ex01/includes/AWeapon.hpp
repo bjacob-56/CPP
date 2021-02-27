@@ -27,10 +27,10 @@ public:
 
 	AWeapon &	operator=(AWeapon const & rhs);
 
-	std::string getName() const; // a ajouter ?
-	int getAPCost() const;
-	int getDamage() const;
-	virtual void attack() const = 0;
+	std::string getName(void) const;
+	int getAPCost(void) const;
+	int getDamage(void) const;
+	virtual void attack(void) const = 0;
 
 protected:
 	std::string	_name;

@@ -58,7 +58,7 @@ void Character::equip(AWeapon* weapon)
 
 void Character::attack(Enemy* enemy)
 {
-	if (!this->_weapon)
+	if (!this->_weapon || this->_ap < this->_weapon->getAPCost())
 		return ;
 	std::cout << this->_name << " attacks " << enemy->getType() << " with a " << this->_weapon->getName() << std::endl;
 	
@@ -67,7 +67,7 @@ void Character::attack(Enemy* enemy)
 	this->_ap -= this->_weapon->getAPCost();
 	if (this->_ap < 0)
 		this->_ap = 0;
-		
+
 	enemy->takeDamage(this->_weapon->getDamage());
 	if (!enemy->getHP())
 		delete enemy;

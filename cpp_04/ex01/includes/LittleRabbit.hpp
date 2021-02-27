@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RadScorpion.hpp                                       :+:      :+:    :+:   */
+/*   LittleRabbit.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,23 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RADSCORPION_HPP
-# define RADSCORPION_HPP
+#ifndef LITTLERABBIT_HPP
+# define LITTLERABBIT_HPP
 
 # include <string>
 # include <iostream>
 
 #include "../includes/Enemy.hpp"
 
-class RadScorpion: public Enemy {
+class LittleRabbit: public Enemy {
 
 public:
 
-	RadScorpion(void);
-	RadScorpion(RadScorpion const & src);
-	virtual ~RadScorpion(void);
+	LittleRabbit(void);
+	LittleRabbit(LittleRabbit const & src);
+	virtual ~LittleRabbit(void);
 
-	RadScorpion &	operator=(RadScorpion const & rhs);
+	LittleRabbit &	operator=(LittleRabbit const & rhs);
 
 private:
 

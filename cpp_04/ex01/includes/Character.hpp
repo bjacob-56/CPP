@@ -29,7 +29,7 @@ public:
 
 	Character &	operator=(Character const & rhs);
 	
-	std::string	getName(void) const; // a ajouter ?
+	std::string	getName(void) const;
 	int	getAP(void) const;
 	AWeapon	*getWeapon(void) const;
 

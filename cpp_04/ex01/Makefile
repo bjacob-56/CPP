@@ -3,7 +3,7 @@ OBJ_DIR	:= obj/
 
 OBJ_DIRS = $(OBJ_DIR)
 
-PRE_SRCS =	main AWeapon PlasmaRifle Enemy SuperMutant RadScorpion Character PowerFist
+PRE_SRCS =	main AWeapon PlasmaRifle Enemy SuperMutant RadScorpion Character PowerFist Stick LittleRabbit
 
 SRCS = $(addsuffix .cpp, $(addprefix $(SRC_DIR), $(PRE_SRCS)))
 OBJS = $(addsuffix .o, $(addprefix $(OBJ_DIR), $(PRE_SRCS)))
@@ -24,7 +24,7 @@ $(NAME): $(OBJ_DIRS) $(OBJS)
 $(OBJ_DIRS):
 	mkdir -p $(OBJ_DIRS)
 
-$(OBJS) : includes/AWeapon.hpp includes/PlasmaRifle.hpp includes/Enemy.hpp includes/SuperMutant.hpp includes/RadScorpion.hpp includes/Character.hpp includes/PowerFist.hpp
+$(OBJS) : includes/AWeapon.hpp includes/PlasmaRifle.hpp includes/Enemy.hpp includes/SuperMutant.hpp includes/RadScorpion.hpp includes/Character.hpp includes/PowerFist.hpp includes/Stick.hpp includes/LittleRabbit.hpp
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
 	$(CC) $(CFLAGS) -c $< -o $@

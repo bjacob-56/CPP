@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RadScorpion.hpp                                       :+:      :+:    :+:   */
+/*   Stick.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,23 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RADSCORPION_HPP
-# define RADSCORPION_HPP
+#ifndef STICK_HPP
+# define STICK_HPP
 
 # include <string>
 # include <iostream>
 
-#include "../includes/Enemy.hpp"
+# include "../includes/AWeapon.hpp"
 
-class RadScorpion: public Enemy {
+class Stick: public AWeapon {
 
 public:
 
-	RadScorpion(void);
-	RadScorpion(RadScorpion const & src);
-	virtual ~RadScorpion(void);
+	Stick(void);
+	Stick(Stick const & src);
+	virtual ~Stick(void);
 
-	RadScorpion &	operator=(RadScorpion const & rhs);
+	Stick &	operator=(Stick const & rhs);
+	
+	void	attack(void) const;
 
 private:
 
