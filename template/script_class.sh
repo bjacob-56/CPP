@@ -11,8 +11,16 @@ if [ $# -gt 0 ]; then
 	sed -e "s/TEMPLATE_CLASS/$UPPER/g" includes/$1_temp.hpp > includes/$1.hpp
 	rm -f includes/$1_temp.hpp
 
-	sed -e "s/Template_class/$1/g" ../../template/main.cpp > srcs/main.cpp
+	if test -f "Makefile"; then
+    	echo "Makefile exists."
+	else
+		sed -e "s/Template_class/$1/g" ../../template/Makefile > Makefile
+	fi
 
-	sed -e "s/Template_class/$1/g" ../../template/Makefile > Makefile
+	if test -f "srcs/main.cpp"; then
+    	echo "main exists."
+	else
+		sed -e "s/Template_class/$1/g" ../../template/main.cpp > srcs/main.cpp
+	fi
 
 fi

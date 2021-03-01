@@ -25,6 +25,7 @@ public:
 	~Template_class(void);
 
 	Template_class &	operator=(Template_class const & rhs);
+	
 	int	getValue(void) const;
 
 private:

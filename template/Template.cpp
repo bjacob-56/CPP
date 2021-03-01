@@ -30,10 +30,10 @@ Template_class::~Template_class(void)
 
 int	Template_class::getValue(void) const
 {
-	return (this->_value);
+	return (_value);
 }
 
 Template_class & Template_class::operator=(Template_class const & rhs){
-	this->_value = rhs.getValue();
+	_value = rhs.getValue();
 	return (*this);
 }
