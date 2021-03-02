@@ -6,7 +6,7 @@
 /*   By: bjacob <bjacob@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 12:00:44 by bjacob            #+#    #+#             */
-/*   Updated: 2021/03/02 15:15:01 by bjacob           ###   ########lyon.fr   */
+/*   Updated: 2021/03/02 16:18:01 by bjacob           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void fill_random_str(char *str)
 		str[i] = tab_str[nb];
 		std::cout << str[i];
 	}
+	str[8] = 0;
 	std::cout << std::endl;
 }
 
@@ -44,23 +45,18 @@ void fill_random_int(int *nb)
 void	*serialize(void)
 {
 	char *data = new char[52];
-	char str[8];
-	std::string *ptr;
-	
-	ptr = reinterpret_cast<std::string *>(data);
+
+	char str[9];
+	std::string &ptr1 = reinterpret_cast<std::string &>(*data);
+	std::string &ptr2 = reinterpret_cast<std::string &>(*(data + 28));
+
 	fill_random_str(str);
-	(*ptr).assign(str);
-std::cout << "p0" << std::endl;
+	ptr1.assign(str, 9);
 
-	fill_random_int(reinterpret_cast<int *>(data + 8));
+	fill_random_int(reinterpret_cast<int *>(data + 24));
 
-std::cout << "p1" << std::endl;
-
-	ptr = reinterpret_cast<std::string *>(data + 28);
 	fill_random_str(str);
-	(*ptr).assign(str);
-
-std::cout << "p2" << std::endl;
+	ptr2.assign(str, 9);
 
 	return (reinterpret_cast<void*>(data));
 }
@@ -68,30 +64,15 @@ std::cout << "p2" << std::endl;
 
 // -----  Deserialize  -----
 
-// Data * deserialize(void * raw)
-// {
-// 	Data *data = new Data();
-
-// 	char *str = reinterpret_cast<char *>(raw);
-// 	int	*nb = reinterpret_cast<int *>(reinterpret_cast<char *>(raw) + 8);
-
-// 	data->s1 = std::string(str, 8);
-// 	data->s2 = std::string(str + 12, 8);
-// 	data->n = *(nb);
-// 	return (data);
-// }
-
 Data * deserialize(void * raw)
 {
-
 	Data *data = new Data();
+	char *str = reinterpret_cast<char *>(raw);
 
-	std::string *str = reinterpret_cast<std::string *>(raw);
-	int	*nb = reinterpret_cast<int *>(reinterpret_cast<char *>(raw) + 24);
+	data->s1.assign(str, 9);
+	data->n = *(reinterpret_cast<int *>(str + 24));
+	data->s2.assign(str + 28, 9);
 
-	data->s1 = std::string(*str, 0, 8);
-	data->s2 = std::string(*(str + 12), 8);
-	data->n = *(nb);
 	return (data);
 }
 
@@ -99,11 +80,14 @@ Data * deserialize(void * raw)
 
 int main(void)
 {
+	std::cout << "----------  SERIALIZE  ----------" << std::endl;
 	void *raw = serialize();
 
+	std::cout << std::endl;
+	std::cout << "----------  DESERIALIZE  ----------" << std::endl;
 	Data *data = deserialize(raw);
 
-	std::cout << std::endl << "str = " << data->s1 << std::endl << "nb = " << data->n << std::endl << "str = " << data->s2 << std::endl;
+	std::cout << "str = " << data->s1 << std::endl << "nb = " << data->n << std::endl << "str = " << data->s2 << std::endl;
 	
 	return 0;
 }

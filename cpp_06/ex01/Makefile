@@ -3,7 +3,7 @@ SRCS =	serialize.cpp
 NAME = serialize
 
 CC = clang++
-CFLAGS = -Wall -Wextra -Werror -I.
+CFLAGS = -Wall -Wextra -Werror -I. -fsanitize=address
 
 all:	$(NAME)
 
