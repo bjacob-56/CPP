@@ -3,7 +3,7 @@ SRCS =	convert.cpp
 NAME = convert
 
 CC = clang++
-CFLAGS = -Wall -Wextra -Werror -I. -g3 -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -I.
 
 all:	$(NAME)
 
