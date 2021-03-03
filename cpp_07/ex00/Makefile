@@ -3,7 +3,7 @@ SRCS =	main.cpp
 NAME = whatever
 
 CC = clang++
-CFLAGS = -Wall -Wextra -Werror -I.
+CFLAGS = -Wall -Wextra -Werror -I. -std=c++98
 
 all:	$(NAME)
 
