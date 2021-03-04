@@ -17,6 +17,7 @@
 # include <iostream>
 # include <vector>
 # include <exception>
+# include <limits>
 
 class Span {
 
@@ -33,9 +34,22 @@ public:
 	std::vector<int>	getV(void) const;
 
 	void	addNumber(int);
+	void	addNumber(int, int);
 
-	int		shortestSpan(void) const;
-	int		longestSpan(void) const;
+	long		shortestSpan(void) const;
+	long		longestSpan(void) const;
+
+	void		displayContainer(void) const;
+
+	class FullContainerException: public std::exception
+	{
+		virtual const char* what(void) const throw();
+	};
+
+	class LessThanTwoElementsException: public std::exception
+	{
+		virtual const char* what(void) const throw();
+	};
 
 private:
 	unsigned int	_n;
